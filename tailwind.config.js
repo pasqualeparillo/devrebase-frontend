@@ -427,6 +427,9 @@ module.exports = {
     }
   },
   variants: {
+    mixBlendMode: ["responsive"],
+    backgroundBlendMode: ["responsive"],
+    isolation: ["responsive"],
     alignContent: ["responsive"],
     alignItems: ["responsive"],
     alignSelf: ["responsive"],
@@ -493,5 +496,5 @@ module.exports = {
     zIndex: ["responsive"]
   },
   corePlugins: {},
-  plugins: []
+  plugins: [require("tailwindcss-blend-mode")]
 };

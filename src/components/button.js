@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-type ButtonProps = {
-  text: string;
-  opposite: boolean;
-};
-
 const variant = {
   active: {
     x: -5,
@@ -16,7 +11,7 @@ const variant = {
     y: 0
   }
 };
-export function BasicButton({ text, opposite }: ButtonProps) {
+export function BasicButton({ text, opposite }) {
   return (
     <div
       className={

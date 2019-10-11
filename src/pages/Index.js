@@ -1,14 +1,14 @@
 import React from "react";
 import Search from "../search";
 import Results from "../results/index";
-import Map from "../results/map";
+import Filter from "../filter/index";
 
 export default function IndexPage() {
   return (
     <div>
       <Search />
+      <Filter />
       <Results />
-      <Map />
     </div>
   );
 }

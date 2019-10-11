@@ -1,16 +1,25 @@
-.card {
+.job-card {
   margin: 0.5em;
 }
-.card:nth-child(4n) {
+.job-card:nth-child(4n) {
   margin-right: 0;
 }
-.card > * {
+.job-card > * {
   margin-left: 10px;
   margin-right: 10px;
+}
+.category-card:nth-child(4n) {
+  margin-right: 0;
+}
+.category-card:first-child {
+  margin-left: 0;
 }
 .button:first-child {
   margin-left: 0 !important;
 }
 .button:last-child {
   margin-right: 0 !important;
+}
+.mix-blend-difference {
+  mix-blend-mode: difference;
 }
