@@ -1,22 +1,16 @@
-.App {
-  text-align: center;
+.card {
+  margin: 0.5em;
 }
-
-.App-logo {
-  height: 40vmin;
+.card:nth-child(4n) {
+  margin-right: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card > * {
+  margin-left: 10px;
+  margin-right: 10px;
 }
-
-.App-link {
-  color: #09d3ac;
+.button:first-child {
+  margin-left: 0 !important;
+}
+.button:last-child {
+  margin-right: 0 !important;
 }
