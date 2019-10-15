@@ -1,18 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ModalContext } from '../store/modal';
-export default function Login({ width }) {
-	const { loginActive } = useContext(ModalContext);
+import { ModalContext } from '../../store/modal';
+export default function Register({ width }) {
+	const { registerActive, setLoginActive } = useContext(ModalContext);
+	useEffect(
+		() => {
+			(function clearModal() {
+				if (registerActive) {
+					setLoginActive(false);
+				}
+			})();
+		},
+		[registerActive]
+	);
 	return (
 		<AnimatePresence>
-			{loginActive && (
+			{registerActive && (
 				<motion.div
 					className="absolute h-64 bg-white border-2 border-black z-50 mt-2"
 					style={{
 						left: `calc(-${width / 2}px)`,
 						width: `calc(${width}px * 2)`
 					}}
-					exit={{ opacity: 0 }}
+					exit={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					initial={{ opacity: 0, y: 20 }}
 				>

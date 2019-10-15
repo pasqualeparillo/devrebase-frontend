@@ -1,8 +1,8 @@
 import React, { useContext, useRef, useEffect } from 'react';
 import { BasicButton } from '../components/button';
 import { ModalContext } from '../store/modal';
-import Login from '../authentication/login';
-import Register from '../authentication//register';
+import Login from '../authentication/login/login';
+import Register from '../authentication/register/register';
 export default function RightNav() {
 	const loginRef = useRef();
 	const registerRef = useRef();
@@ -19,18 +19,10 @@ export default function RightNav() {
 	useEffect(() => {
 		(function setPosition() {
 			setLoginPosition({
-				left: loginRef.current.getBoundingClientRect().left,
-				right: loginRef.current.getBoundingClientRect().right,
-				width: loginRef.current.getBoundingClientRect().width,
-				x: loginRef.current.getBoundingClientRect().x,
-				top: loginRef.current.getBoundingClientRect().top
+				width: loginRef.current.getBoundingClientRect().width
 			});
 			setRegisterPosition({
-				left: registerRef.current.getBoundingClientRect().left,
-				right: registerRef.current.getBoundingClientRect().right,
-				width: registerRef.current.getBoundingClientRect().width,
-				x: registerRef.current.getBoundingClientRect().x,
-				top: registerRef.current.getBoundingClientRect().top
+				width: registerRef.current.getBoundingClientRect().width
 			});
 			window.addEventListener('resize', setPosition);
 			return () => window.removeEventListener('resize', setPosition);
@@ -40,25 +32,11 @@ export default function RightNav() {
 		<div className="flex">
 			<div className="relative" ref={loginRef} onClick={() => setLoginActive(!loginActive)}>
 				<BasicButton opposite={false} text={'Login'} />
-				{loginActive && (
-					<Login
-						left={loginPosition.left}
-						right={loginPosition.right}
-						width={loginPosition.width}
-						x={loginPosition.x}
-					/>
-				)}
+				<Login width={loginPosition.width} />
 			</div>
 			<div className="relative" ref={registerRef} onClick={() => setRegisterActive(!registerActive)}>
 				<BasicButton opposite={true} text={'Register'} />
-				{registerActive && (
-					<Register
-						left={registerPosition.left}
-						right={registerPosition.right}
-						width={registerPosition.width}
-						x={registerPosition.x}
-					/>
-				)}
+				<Register width={registerPosition.width} />
 			</div>
 		</div>
 	);
