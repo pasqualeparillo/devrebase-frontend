@@ -6,7 +6,7 @@ import AboutPage from "./pages/about";
 const BaseRouter = () => (
   <div>
     <Route exact path="/" component={IndexPage} />
-    <Route exact path="/about" component={AboutPage} />
+    <Route path="/about" component={AboutPage} />
   </div>
 );
 export default BaseRouter;
