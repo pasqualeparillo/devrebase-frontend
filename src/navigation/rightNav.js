@@ -30,12 +30,17 @@ export default function RightNav() {
 	}, []);
 	return (
 		<div className="flex">
-			<div className="relative" ref={loginRef} onClick={() => setLoginActive(!loginActive)}>
-				<BasicButton opposite={false} text={'Login'} />
+			<div className="relative" ref={loginRef}>
+				<div onClick={() => setLoginActive(!loginActive)}>
+					<BasicButton opposite={false} text={'Login'} />
+				</div>
+
 				<Login width={loginPosition.width} />
 			</div>
-			<div className="relative" ref={registerRef} onClick={() => setRegisterActive(!registerActive)}>
-				<BasicButton opposite={true} text={'Register'} />
+			<div className="relative" ref={registerRef}>
+				<div onClick={() => setRegisterActive(!registerActive)}>
+					<BasicButton opposite={true} text={'Register'} />
+				</div>
 				<Register width={registerPosition.width} />
 			</div>
 		</div>
