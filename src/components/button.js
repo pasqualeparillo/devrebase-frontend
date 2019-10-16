@@ -26,8 +26,8 @@ export function BasicButton({ text, opposite }) {
 				whileHover={'active'}
 				className={
 					opposite === true
-						? 'w-full h-full button text-black lg:pl-8 lg:pr-8 md:pl-4 md:pr-4 pl-1 pr-1 pt-2 pb-2 bg-white font-black hover:text-white hover:bg-black lg:text-base text-xs border-2 border-white'
-						: 'w-full h-full button text-white lg:pl-8 lg:pr-8 md:pl-4 md:pr-4 pl-1 pr-1 pt-2 pb-2 bg-black border-2 border-black font-black hover:text-black hover:bg-white lg:text-base text-xs'
+						? 'w-full h-full button text-black lg:pl-8 lg:pr-8 pr-2 pl-2 pt-2 pb-2 bg-white font-black hover:text-white hover:bg-black lg:text-base text-xs border-2 border-white'
+						: 'w-full h-full button text-white lg:pl-8 lg:pr-8 pr-2 pl-2 pt-2 pb-2 bg-black border-2 border-black font-black hover:text-black hover:bg-white lg:text-base text-xs'
 				}
 			>
 				{text}
