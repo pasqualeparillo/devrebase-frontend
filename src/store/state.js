@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResultsProvider } from './results';
 import { ModalProvider } from './modal';
+import { SearchProvider } from './search';
 
 function ProviderComposer({ contexts, children }) {
 	return contexts.reduceRight(
@@ -13,7 +14,11 @@ function ProviderComposer({ contexts, children }) {
 }
 
 function ContextProvider({ children }) {
-	return <ProviderComposer contexts={[<ResultsProvider />, <ModalProvider />]}>{children}</ProviderComposer>;
+	return (
+		<ProviderComposer contexts={[<ResultsProvider />, <ModalProvider />, <SearchProvider />]}>
+			{children}
+		</ProviderComposer>
+	);
 }
 
 export { ContextProvider };

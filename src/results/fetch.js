@@ -1,18 +1,31 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-export const useFetch = url => {
-  const [response, setResponse] = useState();
-  const [error, setError] = useState();
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(url);
-        return setResponse(res.data);
-      } catch (error) {
-        return setError(error);
-      }
-    };
-    fetchData();
-  }, [url]);
-  return { response, error };
+import { useEffect, useContext } from 'react';
+import { ResultsContext } from '../store/results';
+import { SearchContext } from '../store/search';
+import axios from 'axios';
+
+const useFetch = () => {
+	const { setResults, results, loading, setLoading } = useContext(ResultsContext);
+	const { search } = useContext(SearchContext);
+	useEffect(
+		() => {
+			const fetchData = async function() {
+				try {
+					setLoading(true);
+					const response = await axios.get(search);
+					if (response.status === 200) {
+						setResults(response.data);
+					}
+				} catch (error) {
+					throw error;
+				} finally {
+					setLoading(false);
+				}
+			};
+			fetchData();
+		},
+		[search]
+	);
+	return { loading, results };
 };
+
+export default useFetch;
