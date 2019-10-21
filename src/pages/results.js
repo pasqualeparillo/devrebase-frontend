@@ -5,7 +5,7 @@ import Filter from '../filter/index';
 
 export default function IndexPage() {
 	return (
-		<div>
+		<div className="relative">
 			<Search />
 			<Filter />
 			<Results />

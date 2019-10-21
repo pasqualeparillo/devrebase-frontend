@@ -3,7 +3,18 @@ import { BasicButton } from '../components/button';
 import { ModalContext } from '../store/modal';
 import Login from '../authentication/login/login';
 import Register from '../authentication/register/register';
+import { Wrapper, Button } from '../components/button';
 export default function RightNav() {
+	const variant = {
+		active: {
+			x: -5,
+			y: 5
+		},
+		inactive: {
+			x: 0,
+			y: 0
+		}
+	};
 	const loginRef = useRef();
 	const registerRef = useRef();
 	const {
@@ -31,16 +42,19 @@ export default function RightNav() {
 	return (
 		<div className="flex">
 			<div className="relative" ref={loginRef}>
-				<div onClick={() => setLoginActive(!loginActive)}>
-					<BasicButton opposite={false} text={'Login'} />
-				</div>
-
+				<Wrapper onClick={() => setLoginActive(!loginActive)}>
+					<Button variants={variant} initial={'inactive'} whileHover={'active'}>
+						Login
+					</Button>
+				</Wrapper>
 				<Login width={loginPosition.width} />
 			</div>
 			<div className="relative" ref={registerRef}>
-				<div onClick={() => setRegisterActive(!registerActive)}>
-					<BasicButton opposite={true} text={'Register'} />
-				</div>
+				<Wrapper first={true} onClick={() => setRegisterActive(!registerActive)} opposite={true}>
+					<Button variants={variant} initial={'inactive'} whileHover={'active'} opposite={true}>
+						Register
+					</Button>
+				</Wrapper>
 				<Register width={registerPosition.width} />
 			</div>
 		</div>

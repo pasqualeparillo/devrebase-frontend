@@ -1,5 +1,5 @@
 import React from 'react';
-import { BasicButton } from '../../components/button';
+import { Wrapper, Button } from '../../components/button';
 import useForm from 'react-hook-form';
 
 export default function RegisterForm() {
@@ -7,6 +7,16 @@ export default function RegisterForm() {
 	function onSubmit(values) {
 		console.log(values);
 	}
+	const variant = {
+		active: {
+			x: -5,
+			y: 5
+		},
+		inactive: {
+			x: 0,
+			y: 0
+		}
+	};
 	return (
 		<div className="w-full h-full flex flex-wrap flex-grow justify-center mt-2">
 			<form className="w-5/6 flex flex-col" onSubmit={handleSubmit(onSubmit)}>
@@ -29,7 +39,11 @@ export default function RegisterForm() {
 					ref={register}
 				/>
 				<div className="mt-4 flex">
-					<BasicButton text="Submit" />
+					<Wrapper className="flex-grow" first={true}>
+						<Button variants={variant} initial={'inactive'} whileHover={'active'}>
+							Submit
+						</Button>
+					</Wrapper>
 				</div>
 			</form>
 		</div>
