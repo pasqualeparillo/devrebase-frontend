@@ -8,7 +8,7 @@ function Results() {
 	return (
 		<div className="flex flex-wrap justify-center w-full">
 			<Modal />
-			<div className="w-5/6 flex flex-col justify-between flex-wrap">
+			<div className="lg:w-5/6 w-11/12 flex flex-col justify-between flex-wrap">
 				<Header />
 				<Map />
 			</div>

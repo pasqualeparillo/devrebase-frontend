@@ -19,7 +19,7 @@ export default function RegisterForm() {
 	};
 	return (
 		<div className="w-full h-full flex flex-wrap flex-grow justify-center mt-2">
-			<form className="w-5/6 flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+			<form className="lg:w-5/6 w-11/12 flex flex-col" onSubmit={handleSubmit(onSubmit)}>
 				<label className="text-xs font-bold mb-2">Username:</label>
 				<input type="text" className="border-2 border-black p-1 rounded-none" name="userName" ref={register} />
 				<label className="text-xs font-bold mb-2 mt-2">Email:</label>
