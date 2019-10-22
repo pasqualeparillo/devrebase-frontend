@@ -32,7 +32,6 @@ input[type="checkbox"]:checked::after {
   background-color: #000000;
   transform: translate(50%, 50%);
 }
-
 html {
   overflow: scroll;
   overflow-x: hidden;
