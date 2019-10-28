@@ -3,17 +3,19 @@ import { ResultsContext } from '../store/results';
 import { SearchContext } from '../store/search';
 import axios from 'axios';
 
-const useFetch = () => {
+const useFetch = bottom => {
 	const { setResults, results, loading, setLoading } = useContext(ResultsContext);
 	const { search } = useContext(SearchContext);
 	useEffect(
 		() => {
 			const fetchData = async function() {
 				try {
-					setLoading(true);
+					if (!bottom) {
+						setLoading(true);
+					}
 					const response = await axios.get(search);
 					if (response.status === 200) {
-						setResults(response.data);
+						setResults(prevState => [...prevState, ...response.data]);
 					}
 				} catch (error) {
 					throw error;

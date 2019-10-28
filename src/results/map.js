@@ -2,14 +2,21 @@ import React, { useContext } from 'react';
 import Card from './card';
 import { ResultsContext } from '../store/results';
 import useFetch from '../hooks/fetch';
+import useInfiniteScroll from '../hooks/infiniteScroll';
+import { SearchContext } from '../store/search';
 const Map = React.memo(function Map() {
 	const { results, loading, open, setOpen, setData } = useContext(ResultsContext);
+	const { setSearch } = useContext(SearchContext);
 	function handleOnClick(data) {
 		setOpen(!open);
 		setData(data);
 		console.log(open + 'open left data right ' + data.title);
 	}
-	useFetch();
+	const { bottom } = useInfiniteScroll(fetchMore);
+	useFetch(bottom);
+	function fetchMore() {
+		setSearch('https://jsonplaceholder.typicode.com/todos');
+	}
 	return (
 		<div className="flex flex-wrap -ml-2 ">
 			{loading ? (
