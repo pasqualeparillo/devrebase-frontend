@@ -1,46 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Jomolhari|Roboto:400,700,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Jomolhari|Roboto:400,700,900&display=swap");
 .font-roboto {
-	font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .job-card {
-	margin: 0.5em;
+  margin: 2em;
+  margin-bottom: 0.25em;
 }
-.job-card:nth-child(4n) {
-	margin-right: 0;
+.job-card:nth-child(3n) {
+  margin-right: 0;
+}
+.job-card:nth-child(1n) {
+  margin-left: 0;
 }
 .job-card > * {
-	margin-left: 10px;
-	margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .category-card:nth-child(4n) {
-	margin-right: 0;
+  margin-right: 0;
 }
 .category-card:first-child {
-	margin-left: 0;
+  margin-left: 0;
 }
 .button:first-child {
-	margin-left: 0 !important;
+  margin-left: 0 !important;
 }
 .button:last-child {
-	margin-right: 0 !important;
+  margin-right: 0 !important;
 }
 .mix-blend-difference {
-	mix-blend-mode: difference;
+  mix-blend-mode: difference;
 }
 input[type="checkbox"]:checked::after {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 50%;
-	height: 50%;
-	background-color: #000000;
-	transform: translate(50%, 50%);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #000000;
+  transform: translate(50%, 50%);
 }
 html {
-	overflow: scroll;
-	overflow-x: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-	width: 0px;
-	background: transparent;
+  width: 0px;
+  background: transparent;
 }

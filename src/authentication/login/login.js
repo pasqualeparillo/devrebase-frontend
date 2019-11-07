@@ -20,11 +20,7 @@ export default function Login({ width }) {
         <AnimatePresence>
           {loginActive && (
             <motion.div
-              className="absolute bg-white border-2 border-black z-50 mt-2  pb-4"
-              style={{
-                left: `calc(-${width / 2}px)`,
-                width: `calc(${width}px * 2)`
-              }}
+              className="absolute bg-white border-2 border-black z-50 mt-2  pb-4 w-1/2 h-full right-0"
               exit={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 20 }}
