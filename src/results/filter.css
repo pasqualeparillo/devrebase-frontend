@@ -1,0 +1,45 @@
+.filter-spacing {
+	margin-left: .25rem;
+	margin-right: .25rem;
+}
+.filter-spacing:first-child {
+	margin-left: 0;
+}
+.checkbox input[type="checkbox"] {
+	opacity: 0;
+}
+.checkbox label::before,
+.checkbox label::after {
+	position: absolute;
+	content: "";
+	display: inline-block;
+}
+.checkbox label::before {
+	height: 16px;
+	width: 16px;
+	border: 1.5px solid;
+	left: 0px;
+	top: 3px;
+	border-radius: .25rem;
+}
+.checkbox label::after {
+	height: 5px;
+	width: 9px;
+	border-left: 1.5px solid #ffffff;
+	border-bottom: 1.5px solid #ffffff;
+	transform: rotate(-45deg);
+	left: 4px;
+	top: 7px;
+}
+.checkbox input[type="checkbox"] + label::after {
+	content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+	content: "";
+}
+.checkbox input[type="checkbox"]:checked + label::before {
+	background-color: #000000;
+	border-color: #000000 !important;
+}
