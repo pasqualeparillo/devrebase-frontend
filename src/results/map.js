@@ -14,7 +14,7 @@ const Map = React.memo(function Map() {
   useFetch();
 
   return (
-    <div className="flex flex-wrap ">
+    <div className="flex flex-wrap w-11/12">
       {loading ? (
         <React.Fragment>
           <div className="w-5/6">

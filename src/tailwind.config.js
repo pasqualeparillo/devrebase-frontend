@@ -257,7 +257,7 @@ module.exports = {
         '"Liberation Mono"',
         '"Courier New"',
         "monospace"
-      ],
+      ]
     },
     fontSize: {
       xs: "0.75rem",
@@ -274,6 +274,12 @@ module.exports = {
       "8xl": "6rem",
       "9xl": "7rem",
       "10xl": "8rem",
+      "5vw": "5vw",
+      "6vw": "6vw",
+      "7vw": "7vw",
+      "8vw": "8vw",
+      "9vw": "9vw",
+      "10vw": "10vw"
     },
     fontWeight: {
       hairline: "100",

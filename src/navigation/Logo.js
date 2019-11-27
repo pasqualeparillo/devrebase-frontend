@@ -1,11 +1,10 @@
-import React from 'react';
-import { FaArtstation } from 'react-icons/fa';
+import React from "react";
 export default function Logo() {
-	return (
-		<div className="font-black ">
-			<div className="h-10 w-10 rounded-full border-4 border-black flex items-center justify-center">
-				<FaArtstation />
-			</div>
-		</div>
-	);
+  return (
+    <div className="flex flex lg:px-12 px-4">
+      <div className="items-center justify-center">
+        <p className="text-4xl font-semibold tracking-wide">hub</p>
+      </div>
+    </div>
+  );
 }
