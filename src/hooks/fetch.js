@@ -14,7 +14,7 @@ const useFetch = () => {
         setLoading(true);
         const response = await axios.get(search);
         if (response.status === 200) {
-          setResults(prevState => [...prevState, ...response.data]);
+          setResults(response.data.results);
         }
       } catch (error) {
         throw error;

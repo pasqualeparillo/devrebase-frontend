@@ -3,24 +3,19 @@ import { SearchContext } from "../store/search";
 import { withRouter } from "react-router-dom";
 import useForm from "react-hook-form";
 
-function SearchBar({ history, styles }) {
+const SearchBar = React.memo(function SearchBar({ history, styles }) {
   const { register, handleSubmit } = useForm();
-  const { search, setSearch } = useContext(SearchContext);
-  function onSubmit() {
-    setSearch("https://jsonplaceholder.typicode.com/comments");
+  const { setSearch } = useContext(SearchContext);
+  function onSubmit(value) {
+    setSearch(`http://127.0.0.1:8000/?search=${value.jobDescription}`);
     history.push("/results");
-  }
-  function handleChange(e) {
-    setSearch({
-      ...search,
-      [e.target.name]: e.target.value
-    });
   }
 
   return (
     <form
       className={
-        styles + " flex bg-white relative rounded-lg border border-gray-200"
+        styles +
+        " flex bg-white relative rounded-lg border border-gray-200 z-50"
       }
       onSubmit={handleSubmit(onSubmit)}
     >
@@ -29,16 +24,12 @@ function SearchBar({ history, styles }) {
         type="text"
         placeholder="Job title or keywords"
         name="jobDescription"
-        onChange={handleChange}
-        value={search.jobDescription || ""}
         ref={register}
       />
       <input
         className="w-full bg-transparent px-8 py-6 lg:text-left text-center tracking-wider text-gray-400 lg:text-2xl text-xs"
         type="text"
         placeholder="Location"
-        onChange={handleChange}
-        value={search.areaCode || ""}
         name="areaCode"
         ref={register}
       />
@@ -48,5 +39,5 @@ function SearchBar({ history, styles }) {
       </button>
     </form>
   );
-}
+});
 export default withRouter(SearchBar);

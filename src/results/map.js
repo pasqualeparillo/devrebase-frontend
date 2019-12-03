@@ -9,12 +9,12 @@ const Map = React.memo(function Map() {
   function handleOnClick(data) {
     setOpen(!open);
     setData(data);
-    console.log(open + "open left data right " + data.title);
   }
-  useFetch();
+  useFetch("http://127.0.0.1:8000/");
 
   return (
-    <div className="flex flex-wrap w-11/12">
+    <div className="flex flex-wrap lg:w-11/12 w-full">
+      {console.log(results)}
       {loading ? (
         <React.Fragment>
           <div className="w-5/6">
@@ -26,9 +26,13 @@ const Map = React.memo(function Map() {
           <Card
             handleOnClick={() => handleOnClick(data)}
             key={id}
-            title={data.title}
             id={data.id}
-            body={data.body}
+            url={data.job_url}
+            title={data.job_title}
+            company={data.job_company}
+            location={data.job_location}
+            source={data.job_source}
+            body={data.job_body}
           />
         ))
       )}

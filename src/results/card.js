@@ -2,31 +2,45 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TiBookmark } from "react-icons/ti";
 
-export default function Card({ title, id, body, handleOnClick, data }) {
+export default function Card({
+  title,
+  id,
+  company,
+  handleOnClick,
+  data,
+  url,
+  location
+}) {
   return (
     <motion.div
-      className="w-full flex py-4 rounded-sm border-b cursor-pointer"
+      className="w-full flex py-6 px-4 rounded-sm border-b cursor-pointer"
       onClick={() => handleOnClick(data)}
     >
-      <div className="flex items-center px-4">
-        <div className="h-20 w-20 rounded-full bg-black" />
+      <div className="flex items-center lg:px-4 pr-2">
+        <div className="lg:h-20 h-12 lg:w-20 w-12 rounded-full bg-black" />
       </div>
-      <div className="flex flex-wrap  flex-1">
+      <div className="flex flex-wrap flex-1" style={{ flexBasis: "40%" }}>
         <div className="w-full">
-          <p className="text-xl font-medium w-3/4 break-all">{title}</p>
+          <p
+            className="lg:text-xl text-sm font-bold break-all"
+            style={{ maxWidth: "80%" }}
+          >
+            {title}
+          </p>
         </div>
-        <div className="w-full flex items-center ">
-          <p className="text-gray-500 text-sm">Spotify</p>
+
+        <div className="w-full flex items-center " style={{ maxWidth: "80%" }}>
+          <p className="text-gray-500 lg:text-base text-xs">{company}</p>
           <div className="h-1 w-1 bg-gray-500 rounded-full mx-4" />
-          <p className="text-gray-500 text-sm">{id} day ago</p>
+          <p className="text-gray-500 lg:text-base text-xs">{id} day ago</p>
         </div>
       </div>
       <div className="flex flex-wrap justify-center flex-1">
         <div className="w-full flex items-end">
-          <p className="font-semibold text-sm">Full-Time</p>
+          <p className="font-semibold lg:text-base text-xs">Full-Time</p>
         </div>
         <div className="w-full flex items-start">
-          <p className="text-gray-500 text-sm">Stockholm, Sweden</p>
+          <p className="text-gray-500 lg:text-base text-xs">{location}</p>
         </div>
       </div>
       <div className="flex items-center w-1/6 flex-1 justify-end">

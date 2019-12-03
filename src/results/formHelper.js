@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
+import { motion } from "framer-motion";
 export function Checkbox({ text }) {
   return (
     <div className="checkbox relative">
       <input type="checkbox" className="w-full absolute h-full z-20 " />
-      <label className="ml-8 text-gray-700 truncate" htmlFor="checkbox">
+      <label className="ml-8 text-gray-700 truncate text-lg" htmlFor="checkbox">
         {text}
       </label>
     </div>
@@ -13,15 +13,39 @@ export function Checkbox({ text }) {
 export function Button({ text }) {
   const [active, setActive] = useState(false);
   return (
-    <button
-      className={
+    <motion.button
+      animate={
         active
-          ? "bg-black text-white text-sm px-3 py-1 rounded-full"
-          : "bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full "
+          ? { color: "#ffffff", backgroundColor: "#000000" }
+          : { color: "#a0aec0", backgroundColor: "#edf2f7" }
       }
+      initial={{ color: "#a0aec0", backgroundColor: "#edf2f7" }}
+      transition={{ duration: 0.2 }}
+      className={"px-3 py-1 rounded-full text-lg"}
       onClick={() => setActive(!active)}
     >
       {text}
-    </button>
+    </motion.button>
+  );
+}
+export function DropDown() {
+  return (
+    <React.Fragment>
+      <div className="flex flex-wrap w-full">
+        <label className="py-4 font-semibold text-xl" htmlFor="distance">
+          Distance:
+        </label>
+        <select
+          className="w-full border border-black px-4 py-2 rounded-full"
+          name="distance"
+        >
+          <option value="5">within 5 miles</option>
+          <option value="10">within 10 miles</option>
+          <option value="20">within 20 miles</option>
+          <option value="50">within 50 miles</option>
+          <option value="50">any</option>
+        </select>
+      </div>
+    </React.Fragment>
   );
 }

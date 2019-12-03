@@ -1,7 +1,11 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState } from "react";
 export const SearchContext = createContext();
 export function SearchProvider(props) {
-	const [search, setSearch] = useState('https://jsonplaceholder.typicode.com/posts');
+  const [search, setSearch] = useState("http://127.0.0.1:8000/");
 
-	return <SearchContext.Provider value={{ search, setSearch }}>{props.children}</SearchContext.Provider>;
+  return (
+    <SearchContext.Provider value={{ search, setSearch }}>
+      {props.children}
+    </SearchContext.Provider>
+  );
 }
