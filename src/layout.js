@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./navigation/index";
+import Header from "./navbar/index";
 
 export default function Layout({ children }) {
   return (
