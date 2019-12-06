@@ -4,7 +4,10 @@ import Links from "./links";
 
 export default function Header() {
   return (
-    <div className="w-full h-32 p-4 flex z-50 relative bg-white items-center relative overflow-hidden">
+    <div
+      className="w-full h-24 p-4 flex items-center fixed overflow-hidden border-b border-tan-400 bg-white"
+      style={{ zIndex: 9999 }}
+    >
       <Logo />
       <Links />
     </div>

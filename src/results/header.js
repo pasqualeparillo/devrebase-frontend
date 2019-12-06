@@ -3,8 +3,8 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 export default function Header() {
   return (
     <div
-      className="flex flex-wrap text-left mb-10 h-20 items-center sticky top-0 bg-white border-b border-l"
-      style={{ marginLeft: "-1px" }}
+      className="flex flex-wrap text-left mb-10 h-20 items-center sticky top-0 bg-white border-b border-l sticky"
+      style={{ marginLeft: "-1px", top: "6rem" }}
     >
       <p className="text-xl pl-4">Sort by</p>
       <div className="flex items-center px-4">

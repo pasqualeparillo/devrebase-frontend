@@ -45,6 +45,9 @@ module.exports = {
         800: "#9b2c2c",
         900: "#742a2a"
       },
+      tan: {
+        400: "#FF8473"
+      },
       orange: {
         100: "#fffaf0",
         200: "#feebc8",
@@ -188,6 +191,7 @@ module.exports = {
     },
     borderWidth: {
       default: "1px",
+      px: ".5px",
       "0": "0",
       "2": "2px",
       "4": "4px",

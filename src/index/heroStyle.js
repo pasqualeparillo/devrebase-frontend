@@ -6,65 +6,43 @@ export default function HeroStyle() {
     <React.Fragment>
       <MediaQuery minWidth={992}>
         <div
-          className="absolute lg:h-64 lg:w-64 w-32 h-32 flex flex-wrap "
-          style={{ left: "-14rem", bottom: "2.5rem" }}
+          className="absolute w-screen overflow-hidden bg-white border-b border-black"
+          style={{ height: "80vh", opacity: "10%" }}
         >
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
-          </div>
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
-          </div>
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
-          </div>
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
-          </div>
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
+          <div className="flex flex-wrap justify-between absolute">
+            {Array(200)
+              .fill(0)
+              .map(id => (
+                <span
+                  style={{
+                    height: "10vw",
+                    width: "10vw"
+                  }}
+                  className="border-px border-black"
+                  key={id}
+                />
+              ))}
           </div>
         </div>
       </MediaQuery>
       <MediaQuery maxWidth={992}>
         <div
-          className="absolute lg:h-64 lg:w-64 w-32 h-32 flex flex-wrap right-0"
-          style={{ top: "24rem" }}
+          className="absolute w-screen overflow-hidden bg-white border-b border-black"
+          style={{ height: "60vh", opacity: "10%" }}
         >
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
-          </div>
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
-          </div>
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
-          </div>
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
-          </div>
-          <div className="w-full justify-between flex">
-            {[0, 1, 2, 3, 4].map(id => (
-              <div key={id} className="w-3 h-3 bg-yellow-400 rounded-full" />
-            ))}
+          <div className="flex flex-wrap justify-between absolute">
+            {Array(200)
+              .fill(0)
+              .map(id => (
+                <span
+                  style={{
+                    height: "20vw",
+                    width: "20vw"
+                  }}
+                  className="border-px border-black"
+                  key={id}
+                />
+              ))}
           </div>
         </div>
       </MediaQuery>

@@ -1,13 +1,34 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 export default function HeroText() {
   return (
-    <div className="lg:w-3/4 w-full flex items-center lg:self-start self-center lg:mb-20 lg:mt-0 mt-20 z-50">
-      <p className="lg:text-6vw text-4xl font-bold leading-none tracking-tightest">
-        Find the most <br />{" "}
-        <span className="border-b-8 border-yellow-400">exciting</span> startup
-        jobs.
-      </p>
-    </div>
+    <React.Fragment>
+      <div className="relative overflow-hidden">
+        <motion.p
+          className="lg:text-5vw text-4xl font-bold leading-none tracking-tightest py-4"
+          animate={{ y: 0 }}
+          initial={{ y: 200 }}
+          transition={{ type: "spring", mass: 2, damping: 50 }}
+        >
+          Find the most <br />{" "}
+        </motion.p>
+      </div>
+      <div className="relative overflow-hidden">
+        <motion.p
+          className="lg:text-5vw text-4xl font-bold leading-none tracking-tightest py-4"
+          animate={{ y: 0 }}
+          initial={{ y: 200 }}
+          transition={{ type: "spring", mass: 2, damping: 50 }}
+        >
+          <span
+            className="border-b-8"
+            style={{ borderColor: "rgb(255, 132, 115)" }}
+          >
+            exciting
+          </span>{" "}
+          startup jobs.
+        </motion.p>
+      </div>
+    </React.Fragment>
   );
 }

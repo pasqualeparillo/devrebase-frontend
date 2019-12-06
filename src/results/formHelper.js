@@ -21,7 +21,7 @@ export function Button({ text }) {
       }
       initial={{ color: "#a0aec0", backgroundColor: "#edf2f7" }}
       transition={{ duration: 0.2 }}
-      className={"px-3 py-1 rounded-full text-lg"}
+      className={"px-3 py-1 rounded-full text-lg truncate"}
       onClick={() => setActive(!active)}
     >
       {text}

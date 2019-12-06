@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { SearchContext } from "../store/search";
 import { withRouter } from "react-router-dom";
 import useForm from "react-hook-form";
-
+import { motion } from "framer-motion";
 const SearchBar = React.memo(function SearchBar({ history, styles }) {
   const { register, handleSubmit } = useForm();
   const { setSearch } = useContext(SearchContext);
@@ -13,14 +13,11 @@ const SearchBar = React.memo(function SearchBar({ history, styles }) {
 
   return (
     <form
-      className={
-        styles +
-        " flex bg-white relative rounded-lg border border-gray-200 z-50"
-      }
+      className={styles + " flex bg-white relative border border-black z-50"}
       onSubmit={handleSubmit(onSubmit)}
     >
       <input
-        className="w-full bg-transparent px-8 py-6 lg:text-left text-center border-r border-gray-200 tracking-wider text-gray-400 lg:text-2xl text-xs"
+        className="w-full bg-transparent px-8 py-6 lg:text-left text-center border-r border-black tracking-wider text-gray-400 lg:text-2xl text-xs"
         type="text"
         placeholder="Job title or keywords"
         name="jobDescription"
@@ -34,9 +31,13 @@ const SearchBar = React.memo(function SearchBar({ history, styles }) {
         ref={register}
       />
 
-      <button className="flex self-center items-center lg:h-16 text-white lg:px-12 px-4 py-4 mr-1 bg-black right-0 rounded-lg tracking-wider lg:text-2xl text-xs">
+      <motion.button
+        className="flex self-center items-center lg:h-16 text-white lg:px-12 px-4 py-4 mr-1 bg-yellow-400 right-0 tracking-wider lg:text-2xl text-xs"
+        whileHover={{ backgroundColor: "rgb(248, 114, 0)" }}
+        style={{ backgroundColor: "rgb(255, 132, 115)" }}
+      >
         <p>Search</p>
-      </button>
+      </motion.button>
     </form>
   );
 });
