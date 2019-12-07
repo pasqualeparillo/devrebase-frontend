@@ -11,7 +11,7 @@ export default function IndexPage() {
         style={{ marginTop: "calc(6rem - 1px" }}
       >
         <HeroStyle />
-        <div className="w-11/12 flex mx-auto lg:mt-56 mt-32 justify-between">
+        <div className="w-11/12 flex mx-auto lg:mt-56 justify-between lg:flex-no-wrap flex-wrap">
           <HeroSearch />
           <HeroPannel />
           <HeroAside />

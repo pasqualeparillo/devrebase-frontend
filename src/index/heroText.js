@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function HeroText() {
   return (
     <React.Fragment>
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden z-10">
         <motion.p
           className="lg:text-5vw text-4xl font-bold leading-none tracking-tightest py-4"
           animate={{ y: 0 }}

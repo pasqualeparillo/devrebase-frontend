@@ -13,7 +13,7 @@ const Map = React.memo(function Map() {
   useFetch("http://127.0.0.1:8000/");
 
   return (
-    <div className="flex flex-wrap lg:w-11/12 w-full">
+    <div className="flex flex-wrap w-full">
       {console.log(results)}
       {loading ? (
         <React.Fragment>

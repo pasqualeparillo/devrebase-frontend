@@ -35,6 +35,7 @@ const SearchBar = React.memo(function SearchBar({ history, styles }) {
         className="flex self-center items-center lg:h-16 text-white lg:px-12 px-4 py-4 mr-1 bg-yellow-400 right-0 tracking-wider lg:text-2xl text-xs"
         whileHover={{ backgroundColor: "rgb(248, 114, 0)" }}
         style={{ backgroundColor: "rgb(255, 132, 115)" }}
+        whileTap={{ scale: 1.05 }}
       >
         <p>Search</p>
       </motion.button>
