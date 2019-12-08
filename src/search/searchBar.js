@@ -3,11 +3,12 @@ import { SearchContext } from "../store/search";
 import { withRouter } from "react-router-dom";
 import useForm from "react-hook-form";
 import { motion } from "framer-motion";
+import { JOB_SEARCH_URL } from "../constants";
 const SearchBar = React.memo(function SearchBar({ history, styles }) {
   const { register, handleSubmit } = useForm();
   const { setSearch } = useContext(SearchContext);
   function onSubmit(value) {
-    setSearch(`http://127.0.0.1:8000/?search=${value.jobDescription}`);
+    setSearch(JOB_SEARCH_URL + value.jobDescription);
     history.push("/results");
   }
 
@@ -17,14 +18,14 @@ const SearchBar = React.memo(function SearchBar({ history, styles }) {
       onSubmit={handleSubmit(onSubmit)}
     >
       <input
-        className="w-full bg-transparent px-8 py-6 lg:text-left text-center border-r border-black tracking-wider text-gray-400 lg:text-2xl text-xs"
+        className="w-1/3 flex-grow bg-transparent px-8 py-6 lg:text-left text-center border-r border-black tracking-wider text-gray-400 lg:text-2xl text-xs rounded-none"
         type="text"
         placeholder="Job title or keywords"
         name="jobDescription"
         ref={register}
       />
       <input
-        className="w-full bg-transparent px-8 py-6 lg:text-left text-center tracking-wider text-gray-400 lg:text-2xl text-xs"
+        className="w-1/3 flex-grow bg-transparent px-8 py-6 lg:text-left text-center tracking-wider text-gray-400 lg:text-2xl text-xs rounded-none"
         type="text"
         placeholder="Location"
         name="areaCode"

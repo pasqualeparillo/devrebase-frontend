@@ -32,7 +32,10 @@ export default function HeroAside() {
         </motion.div>
       </MediaQuery>
       <MediaQuery maxWidth={992}>
-        <motion.div className="flex flex-col w-1/12 h-80 justify-center items-center z-20 absolute right-0 items-center">
+        <motion.div
+          className="flex flex-col w-1/12 h-80 justify-center items-center z-20 absolute items-center"
+          style={{ right: "10%" }}
+        >
           <div className="z-20 ">
             <p
               className="text-tan-400 font-bold relative py-4 flex items-center overflow-hidden"

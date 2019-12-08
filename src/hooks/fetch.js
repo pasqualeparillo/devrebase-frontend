@@ -4,9 +4,14 @@ import { SearchContext } from "../store/search";
 import axios from "axios";
 
 const useFetch = () => {
-  const { setResults, results, loading, setLoading } = useContext(
-    ResultsContext
-  );
+  const {
+    setResults,
+    results,
+    error,
+    setError,
+    loading,
+    setLoading
+  } = useContext(ResultsContext);
   const { search } = useContext(SearchContext);
   useEffect(() => {
     const fetchData = async function() {
@@ -17,14 +22,14 @@ const useFetch = () => {
           setResults(response.data.results);
         }
       } catch (error) {
-        throw error;
+        setError(error);
       } finally {
         setLoading(false);
       }
     };
     fetchData();
   }, [search]);
-  return { loading, results };
+  return { loading, results, error };
 };
 
 export default useFetch;

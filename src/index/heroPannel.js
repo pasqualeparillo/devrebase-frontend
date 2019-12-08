@@ -109,20 +109,41 @@ function HeroCard() {
 
 function HeroModal({ isHovered }) {
   return (
-    <motion.div
-      className="absolute w-full h-64 bg-tan-400 z-50 border border-black flex self-center p-6 z-20 shadow-2xl"
-      animate={isHovered ? { display: "flex" } : { display: "none" }}
-      style={{ left: "-105%" }}
-    >
-      <div
-        className="flex h-20 w-20 bg-white absolute bg-tan-400 border-r border-t border-black"
-        style={{
-          top: "calc(50% - 2.5rem)",
-          transform: "rotate(45deg)",
-          right: "-2.55rem"
-        }}
-      />
-      <p> test text</p>
-    </motion.div>
+    <React.Fragment>
+      <MediaQuery minWidth={992}>
+        <motion.div
+          className="absolute w-full h-64 bg-tan-400 z-50 border border-black flex self-center p-6 z-20 shadow-2xl"
+          animate={isHovered ? { display: "flex" } : { display: "none" }}
+          style={{ left: "-105%" }}
+        >
+          <div
+            className="flex h-20 w-20 bg-white absolute bg-tan-400 border-r border-t border-black"
+            style={{
+              top: "calc(50% - 2.5rem)",
+              transform: "rotate(45deg)",
+              right: "-2.55rem"
+            }}
+          />
+          <p> test text</p>
+        </motion.div>
+      </MediaQuery>
+      <MediaQuery maxWidth={992}>
+        <motion.div
+          className="absolute w-full h-64 bg-tan-400 z-50 border border-black flex self-center p-6 z-20 shadow-2xl"
+          animate={isHovered ? { display: "flex" } : { display: "none" }}
+          style={{ top: "-200%" }}
+        >
+          <div
+            className="flex h-10 w-10 bg-white absolute bg-tan-400 border-r border-b border-black right-0 left-0"
+            style={{
+              left: "calc(50% - 1.25rem)",
+              bottom: "-1.25rem",
+              transform: "rotate(45deg)"
+            }}
+          />
+          <p> test text</p>
+        </motion.div>
+      </MediaQuery>
+    </React.Fragment>
   );
 }

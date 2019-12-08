@@ -1,48 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "./heroStyle.css";
 import MediaQuery from "react-responsive";
 
 export default function HeroStyle() {
+  const [arr, setArr] = useState([]);
+  useEffect(() => {
+    (function generateArr() {
+      for (let i = 0; i < 50; i++) {
+        setArr(prevState => [...prevState, i]);
+      }
+    })();
+  }, []);
+
   return (
     <React.Fragment>
       <MediaQuery minWidth={992}>
         <div
-          className="absolute w-screen overflow-hidden bg-white border-b border-black"
-          style={{ height: "80vh", opacity: "10%" }}
+          className="absolute w-screen bg-white overflow-hidden border-b border-gray-300 h-screen -mt-48"
+          style={{ opacity: ".6", transform: "skewY(-12deg)" }}
         >
           <div className="flex flex-wrap justify-between absolute">
-            {Array(200)
-              .fill(0)
-              .map(id => (
-                <span
-                  style={{
-                    height: "10vw",
-                    width: "10vw"
-                  }}
-                  className="border-px border-black"
-                  key={id}
-                />
-              ))}
+            {arr.map(id => (
+              <span
+                style={{
+                  transform: "skewY(12deg)",
+                  height: "10vw",
+                  width: "10vw"
+                }}
+                className="border-px border-gray-300"
+                key={id}
+              />
+            ))}
           </div>
         </div>
       </MediaQuery>
       <MediaQuery maxWidth={992}>
         <div
-          className="absolute w-screen overflow-hidden bg-white border-b border-black"
-          style={{ height: "60vh", opacity: "10%" }}
+          className="absolute w-screen bg-white overflow-hidden border-b border-gray-300 -mt-24"
+          style={{ opacity: ".6", transform: "skewY(-12deg)", height: "60vh" }}
         >
           <div className="flex flex-wrap justify-between absolute">
-            {Array(200)
-              .fill(0)
-              .map(id => (
-                <span
-                  style={{
-                    height: "20vw",
-                    width: "20vw"
-                  }}
-                  className="border-px border-black"
-                  key={id}
-                />
-              ))}
+            {arr.map(id => (
+              <span
+                style={{
+                  transform: "skewY(12deg)",
+                  height: "20vw",
+                  width: "20vw"
+                }}
+                className="border-px border-gray-300"
+                key={id}
+              />
+            ))}
           </div>
         </div>
       </MediaQuery>

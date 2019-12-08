@@ -4,7 +4,7 @@ import HeroText from "../index/heroText";
 import { motion } from "framer-motion";
 export default function HeroSearch() {
   return (
-    <div className="lg:w-3/6 w-5/6 flex flex-grow flex-col lg:self-start lg:mb-16 lg:mt-0 mt-12 z-50">
+    <div className="lg:w-3/6 w-full flex lg:flex-grow flex-col lg:self-start lg:mb-16 lg:mt-0 mt-12 z-50">
       <HeroText />
       <motion.div
         animate={{ y: 0 }}

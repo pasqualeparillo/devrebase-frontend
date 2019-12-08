@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 export default function HeroText() {
   return (
-    <React.Fragment>
-      <div className="relative overflow-hidden z-10">
+    <div className="flex flex-col lg:w-full w-4/5">
+      <div className="relative overflow-hidden z-10 ">
         <motion.p
-          className="lg:text-5vw text-4xl font-bold leading-none tracking-tightest py-4"
+          className="lg:text-5vw text-4xl font-bold lg:leading-none leading-snug tracking-tightest lg:py-4"
           animate={{ y: 0 }}
           initial={{ y: 200 }}
           transition={{ type: "spring", mass: 2, damping: 50 }}
@@ -15,7 +15,7 @@ export default function HeroText() {
       </div>
       <div className="relative overflow-hidden">
         <motion.p
-          className="lg:text-5vw text-4xl font-bold leading-none tracking-tightest py-4"
+          className="lg:text-5vw text-4xl font-bold lg:leading-none leading-snug tracking-tightest lg:py-4 pb-4"
           animate={{ y: 0 }}
           initial={{ y: 200 }}
           transition={{ type: "spring", mass: 2, damping: 50 }}
@@ -29,6 +29,6 @@ export default function HeroText() {
           startup jobs.
         </motion.p>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
