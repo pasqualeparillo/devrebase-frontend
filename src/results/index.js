@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./header";
 import Map from "./map";
 import { withRouter } from "react-router-dom";
-import Filter from "./filter";
+import { Filter } from "./filter";
 function Results() {
   return (
     <div className="flex flex-wrap justify-center w-full relative">
