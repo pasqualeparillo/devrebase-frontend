@@ -100,11 +100,11 @@ export function MobileFilter() {
         className="w-full h-screen fixed z-50 flex"
       >
         <div className="h-screen relative w-4/5 border-r flex flex-col flex-grow">
-          <div className="flex flex-grow flex-col flex-wrap py-3 px-6 items-center justify-start w-full bg-white flex-1">
-            <div className="w-full flex justify-start  px-6">
+          <div className="flex flex-col flex-wrap py-3 px-3 items-center justify-start w-full bg-white">
+            <div className="w-full flex justify-start  px-3">
               <p className="font-semibold text-xl">Job types</p>
             </div>
-            <div className="flex w-full justify-start  px-6">
+            <div className="flex w-full justify-start  px-3">
               <div className="flex items-center justify-between mt-4 filter-spacing">
                 <Button text={"Full-Time"} />
               </div>
@@ -112,7 +112,7 @@ export function MobileFilter() {
                 <Button text={"Part-Time"} />
               </div>
             </div>
-            <div className="flex w-full justify-start  px-6">
+            <div className="flex w-full justify-start  px-3">
               <div className="flex items-center justify-between mt-4 filter-spacing">
                 <Button text={"Freelance"} />
               </div>
@@ -120,7 +120,7 @@ export function MobileFilter() {
                 <Button text={"Internship"} />
               </div>
             </div>
-            <div className="flex w-full justify-start  px-6">
+            <div className="flex w-full justify-start  px-3">
               <div className="flex items-center justify-between mt-4 filter-spacing">
                 <Button text={"Volenteer"} />
               </div>
@@ -129,42 +129,42 @@ export function MobileFilter() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col flex-wrap py-3 px-6 items-center justify-center bg-white flex-1">
-            <div className="w-full flex justify-start  px-6">
+          <div className="flex flex-col flex-wrap py-3 px-3 items-center justify-center bg-white flex-1">
+            <div className="w-full flex justify-start  px-3">
               <p className="font-semibold text-xl">Job Roles</p>
             </div>
-            <div className="flex flex-col w-full justify-start px-6">
+            <div className="flex flex-col w-full justify-start px-3">
               <div className="flex items-center justify-between mt-2 filter-spacing">
                 <Checkbox text={"User experience"} />
               </div>
             </div>
-            <div className="flex flex-col w-full justify-start px-6">
+            <div className="flex flex-col w-full justify-start px-3">
               <div className="flex items-center justify-between mt-2 filter-spacing">
                 <Checkbox text={"Interaction designer"} />
               </div>
             </div>
-            <div className="flex flex-col w-full justify-start px-6">
+            <div className="flex flex-col w-full justify-start px-3">
               <div className="flex items-center justify-between mt-2 filter-spacing">
                 <Checkbox text={"Creative director"} />
               </div>
             </div>
-            <div className="flex flex-col w-full justify-start px-6">
+            <div className="flex flex-col w-full justify-start px-3">
               <div className="flex items-center justify-between mt-2 filter-spacing">
                 <Checkbox text={"User interface designer"} />
               </div>
             </div>
-            <div className="flex flex-col w-full justify-start px-6">
+            <div className="flex flex-col w-full justify-start px-3">
               <div className="flex items-center justify-between mt-2 filter-spacing">
                 <Checkbox text={"Product designer"} />
               </div>
             </div>
-            <div className="flex flex-col w-full justify-start px-6">
+            <div className="flex flex-col w-full justify-start px-3">
               <div className="flex items-center justify-between mt-2 filter-spacing ">
                 <Checkbox text={"Motion graphics designer"} />
               </div>
             </div>
           </div>
-          <div className="flex flex-col flex-wrap py-6 px-6 items-center justify-start bg-white flex-1">
+          <div className="flex flex-col flex-wrap py-6 px-3 lg:items-center items-start lg:ml-0 ml-4 justify-start bg-white flex-1">
             <DropDown />
           </div>
           <button

@@ -68,7 +68,7 @@ export function Button({ text }) {
 export function DropDown() {
   return (
     <React.Fragment>
-      <div className="flex flex-wrap lg:w-full w-5/6">
+      <div className="flex flex-wrap lg:w-full w-4/5">
         <label className="pb-4 font-semibold text-xl" htmlFor="distance">
           Distance:
         </label>
