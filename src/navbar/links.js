@@ -1,26 +1,37 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Links({ scrolled }) {
+export default function Links() {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-end w-2/3">
       {links.map((data, id) => (
-        <Link scrolled={scrolled} text={data.text} key={id} />
+        <Link text={data.text} key={id} />
       ))}
+      <div className="h-10 flex items-center">
+        <input
+          className="h-full border-2 border-black px-4 py-1 rounded-bl-lg rounded-tl-lg"
+          type="text"
+          placeholder="Your email address"
+        />
+        <motion.button
+          className="h-full bg-black font-black text-white px-10 py-1 rounded-br-lg rounded-tr-lg border-t-2 border-b-2 border-r-2  border-black"
+          whileHover={{ backgroundColor: "rgb(255, 132, 115)" }}
+          transition={{ duration: 0.2 }}
+        >
+          Get started
+        </motion.button>
+      </div>
     </div>
   );
 }
 
-function Link({ text, scrolled }) {
+function Link({ text }) {
   const [active, setActive] = useState(false);
   return (
     <motion.p
-      className="lg:text-xl text-xs mx-6 font-semibold relative cursor-pointer w-full "
+      className="lg:text-base text-xs mx-6 font-semibold relative cursor-pointer "
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
-      animate={
-        scrolled ? { color: "rgb(255, 132, 115)" } : { color: "rgb(0,0,0)" }
-      }
     >
       <motion.span
         className="absolute w-full h-1  left-0 right-0"
