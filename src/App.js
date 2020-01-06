@@ -6,7 +6,7 @@ import BaseRouter from './routes';
 function App({ children }) {
 	return (
 		<ContextProvider>
-			<div className="App font-roboto">
+			<div className="App font-poppins">
 				<Layout {...children}>
 					<BaseRouter />
 				</Layout>

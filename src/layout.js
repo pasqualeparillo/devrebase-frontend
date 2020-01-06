@@ -1,11 +1,11 @@
-import React from "react";
-import Header from "./navbar/index";
+import React from 'react';
+import Header from './navbar/index';
 
 export default function Layout({ children }) {
-  return (
-    <React.Fragment>
-      <Header />
-      {children}
-    </React.Fragment>
-  );
+	return (
+		<div className="relative flex flex-col">
+			<Header />
+			{children}
+		</div>
+	);
 }
