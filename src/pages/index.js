@@ -1,7 +1,7 @@
 import React from 'react';
-import '../index/index.css';
 import IndexJumbo from '../index/indexJumbo/indexJumbo';
 import IndexAd from '../index/indexAd/indexAd';
+import '../index/index.css';
 
 export default function IndexPage() {
 	return (

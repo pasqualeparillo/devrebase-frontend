@@ -3,21 +3,21 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 
 export default function IntroCard() {
 	return (
-		<div className="lg:w-1/4 pr-4">
+		<div className="lg:w-1/4 pr-4 lg:m-0 mt-8 mb-8">
 			<div className="pb-2">
-				<p className="text-3xl font-semibold">Solutions designed for all your needs</p>
+				<p className="lg:text-3xl md:text-3xl text-2xl font-semibold">Solutions designed for all your needs</p>
 			</div>
 			<div className="py-2">
-				<p className="font-medium leading-loose text-base">
+				<p className="leading-loose lg:text-base md:text-base text-sm">
 					Workspace is our craft. From private offices to whole headquarters, we create spaces that work for
 					you.
 				</p>
 			</div>
 			<div className="py-2 w-full flex items-center hover:underline">
-				<a className="font-medium text-base" href="/jobs" style={{ color: 'blue' }}>
+				<a className="text-base" href="/jobs" style={{ color: 'blue' }}>
 					View all solutions
 				</a>
-				<div className="text-2xl px-2" style={{ color: 'blue' }}>
+				<div className="text-xl px-2" style={{ color: 'blue' }}>
 					<IoIosArrowRoundForward />
 				</div>
 			</div>

@@ -6,13 +6,7 @@
 .font-poppins {
 	font-family: 'Poppins', sans-serif;
 }
-.job-card {
-	margin-left: .7em;
-	margin-right: .7em;
-}
-.job-card:last-child {
-	margin-right: 0;
-}
+
 .category-card:nth-child(4n) {
 	margin-right: 0;
 }
