@@ -15,7 +15,7 @@ export default function IndexCard() {
 					alt="placeholder"
 				/>
 			</div>
-			<div className="w-full flex flex-col border-r border-l border-b rounded-b">
+			<div className="w-full flex flex-col border-r border-l border-b rounded-b bg-white">
 				<div className="lg:py-6 md:py-6 py-4 px-4">
 					<p className={isHovered ? `text-xl underline` : `text-xl`} style={{ color: 'blue' }}>
 						Fully custom spaces

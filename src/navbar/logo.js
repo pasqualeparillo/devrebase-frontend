@@ -6,7 +6,7 @@ export default function Logo() {
 			<div className="items-center justify-center flex h-full">
 				<motion.div
 					className="lg:flex md:flex hidden  bg-black h-10 w-10 relative rounded-lg mr-2 flex p-2 justify-between"
-					whileHover={{ backgroundColor: 'rgb(255, 132, 115)' }}
+					whileHover={{ backgroundColor: '#ffd460' }}
 					transition={{ duration: 0.2 }}
 				>
 					<span className="h-4 w-px p-px bg-white self-center" />

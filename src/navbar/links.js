@@ -34,7 +34,7 @@ function Link({ text }) {
 		>
 			<motion.span
 				className="absolute w-full h-1  left-0 right-0"
-				style={{ bottom: '0', backgroundColor: 'rgb(255, 132, 115)' }}
+				style={{ bottom: '0', backgroundColor: '#ffd460' }}
 				animate={active ? { y: 5, opacity: 1 } : { y: 20, opacity: 0 }}
 				initial={{ opacity: 0, y: 20 }}
 				transition={{ duration: 0.4 }}
@@ -43,6 +43,7 @@ function Link({ text }) {
 		</motion.p>
 	);
 }
+
 let links = [
 	{
 		url: '/results',
