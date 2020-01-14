@@ -15,31 +15,33 @@ export default function IndexSearch() {
 					}}
 				>
 					<div className="py-4">
-						<p className="text-4xl font-semibold">Revolutionize your workspace</p>
+						<p className="text-4xl font-semibold font-sans">Revolutionize your workspace</p>
 					</div>
 					<div className="py-4 ">
-						<p className="text-small leading-relaxed">
+						<p className="text-small leading-relaxed font-mono">
 							Job searching doesn't HAVE to be so hard. One account, one site, all the jobs.
 						</p>
 					</div>
 					<div className="py-4 relative">
-						<input
-							className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black"
-							placeholder="Job Title"
-							type="text"
-						/>
-						<div className="absolute bg-white px-2" style={{ left: '1rem', top: '.5rem' }}>
-							<p className="text-xs text-gray-600">Find your ideal job</p>
-						</div>
+						<form>
+							<input
+								className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black"
+								placeholder="Job Title"
+								type="text"
+							/>
+							<div className="absolute bg-white px-2" style={{ left: '1rem', top: '.5rem' }}>
+								<p className="text-xs text-gray-600 font-mono">Find your ideal job</p>
+							</div>
 
-						<motion.button
-							className="w-full rounded text-black mt-8 py-4 "
-							style={{ backgroundColor: '#ffd460' }}
-							whileHover={{ backgroundColor: '#f9ed69' }}
-							transition={{ duration: 0.2 }}
-						>
-							Submit
-						</motion.button>
+							<motion.button
+								className="w-full rounded text-black mt-8 py-4 font-mono"
+								style={{ backgroundColor: '#ffd460' }}
+								whileHover={{ backgroundColor: '#f9ed69' }}
+								transition={{ duration: 0.2 }}
+							>
+								Submit
+							</motion.button>
+						</form>
 					</div>
 				</div>
 			</MediaQuery>
@@ -56,28 +58,30 @@ export default function IndexSearch() {
 						<p className="md:text-4xl text-xl font-semibold">Revolutionize your workspace</p>
 					</div>
 					<div className="py-4 ">
-						<p className="text-small leading-relaxed">
+						<p className="text-small leading-relaxed font-mono">
 							Job searching doesn't HAVE to be so hard. One account, one site, all the jobs.
 						</p>
 					</div>
 					<div className="py-4 relative">
-						<input
-							className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black"
-							placeholder="Job Title"
-							type="text"
-						/>
-						<div className="absolute bg-white px-2" style={{ left: '1rem', top: '.5rem' }}>
-							<p className="text-xs text-gray-600">Find your ideal job</p>
-						</div>
+						<form>
+							<input
+								className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black"
+								placeholder="Job Title"
+								type="text"
+							/>
+							<div className="absolute bg-white px-2" style={{ left: '1rem', top: '.5rem' }}>
+								<p className="text-xs text-gray-600 font-mono">Find your ideal job</p>
+							</div>
 
-						<motion.button
-							className="w-full rounded text-black mt-8 py-4 "
-							style={{ backgroundColor: '#ffd460' }}
-							whileHover={{ backgroundColor: '#f9ed69' }}
-							transition={{ duration: 0.2 }}
-						>
-							Submit
-						</motion.button>
+							<motion.button
+								className="w-full rounded text-black mt-8 py-4 font-mono"
+								style={{ backgroundColor: '#ffd460' }}
+								whileHover={{ backgroundColor: '#f9ed69' }}
+								transition={{ duration: 0.2 }}
+							>
+								Submit
+							</motion.button>
+						</form>
 					</div>
 				</div>
 			</MediaQuery>

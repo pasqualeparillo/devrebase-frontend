@@ -7,7 +7,7 @@ export default function Header() {
 	return (
 		<div className="w-full py-3 flex items-center relative overflow-hidden bg-white">
 			<MediaQuery minWidth={1025}>
-				<div className="flex w-3/4 justify-between mx-auto">
+				<div className="flex w-8/9 justify-between mx-auto">
 					<Logo />
 					<Links />
 				</div>
