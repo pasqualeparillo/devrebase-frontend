@@ -14,7 +14,9 @@ export default function Logo() {
 					<span className="h-full w-px p-px bg-white" />
 					<span className="h-4 w-px p-px bg-white self-center" />
 				</motion.div>
-				<motion.p className="lg:text-4xl md:text-4xl text-2xl font-semibold tracking-wide">hub</motion.p>
+				<motion.p className="lg:text-4xl md:text-4xl text-2xl font-semibold tracking-wide heading">
+					hub
+				</motion.p>
 			</div>
 		</div>
 	);

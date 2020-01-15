@@ -1,74 +1,42 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-
+import AdCard from './adCard';
 export default function AdSection() {
 	return (
 		<div
-			className="lg:w-8/9 md:w-8/9 w-full flex flex-col flex-wrap self-center justify-between lg:flex-no-wrap flex-wrap  relative mt-24 mb-24"
+			className="lg:w-8/9 md:w-8/9 w-full flex flex-wrap self-center justify-center lg:flex-no-wrap flex-wrap relative lg:mt-24 mb-24 rounded overflow-hidden"
 			style={{ maxWidth: '1440px' }}
 		>
-			<div className="w-full h-full flex lg:flex-row flex-col bg-black lg:p-12 p-6 rounded">
-				<div className="flex flex-col lg:w-1/2 w-full h-full justify-between lg:items-center lg:p-16">
-					<p className="text-white font-black lg:text-6xl text-3xl font-sans">What is Devrebase? </p>
-				</div>
-				<div className="flex flex-col lg:w-1/2 w-full h-full items-start lg:py-16 py-10 lg:pr-16">
-					<div className="w-full flex items-center content-center">
-						<motion.button
-							className="rounded-full font-semibold text-lg px-8 py-4"
-							style={{ backgroundColor: '#ffd460' }}
-							whileHover={{ backgroundColor: '#f9ed69' }}
-						>
-							Know More
-						</motion.button>
-					</div>
-					<div className="lg:w-2/3 w-full flex items-center content-center">
-						<p className="font-base text-sm leading-loose text-gray-300 mt-8 font-mono">
-							Interact with your users on the platforms they prefer. Web and mobile - we have you covered.
+			<img
+				src="https://images.unsplash.com/photo-1557801558-10597b455287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+				className="w-full h-full bg-cover bg-gray-500 absolute"
+				alt="background"
+			/>
+			<div className="lg:w-4/5 w-full bg-white px-6 z-50 lg:mt-32 flex flex-wrap">
+				<div className="w-full py-2">
+					<div className="py-2 flex flex-col ">
+						<p className="font-sans text-4xl font-black py-2 heading">Why DevRebase?</p>
+						<p className="font-sans text-base font-semibold py-2 lg:w-2/3 w-full subtext leading-relaxed tracking-wide">
+							With a decade of insights and expertise, we’re reimagining real estate so that you can focus
+							on your business.
 						</p>
 					</div>
-					<div className="w-full flex flex-col items-center content-center">
-						<div className="w-full flex mt-12 mb-12">
-							<p className="text-white font-semibold">Why Devrebase?</p>
-						</div>
-						<div className="w-full flex lg:flex-wrap md:flex-no-wrap">
-							<div className="lg:w-1/2 w-full flex flex-col">
-								<div className="w-full py-4 flex items-center relative">
-									<div className="bg-yellow-400 rounded-full w-2 h-2 mr-4" />
-									<p className="text-gray-300 text-sm">UI/UX Design</p>
-								</div>
-								<div className="w-full py-4 flex items-center relative">
-									<div className="bg-yellow-400 rounded-full w-2 h-2 mr-4" />
-									<p className="text-gray-300 text-sm">Mobile App Design</p>
-								</div>
-								<div className="w-full py-4 flex items-center relative">
-									<div className="bg-yellow-400 rounded-full w-2 h-2 mr-4" />
-									<p className="text-gray-300 text-sm">Content Strategy</p>
-								</div>
-								<div className="w-full py-4 flex items-center relative">
-									<div className="bg-yellow-400 rounded-full w-2 h-2 mr-4" />
-									<p className="text-gray-300 text-sm">Front-End Development</p>
-								</div>
-							</div>
-							<div className="lg:w-1/2 w-full flex flex-col">
-								<div className="w-full py-4 flex items-center relative">
-									<div className="bg-yellow-400 rounded-full w-2 h-2 mr-4" />
-									<p className="text-gray-300 text-sm">Prototyping & Interactions</p>
-								</div>
-								<div className="w-full py-4 flex items-center relative">
-									<div className="bg-yellow-400 rounded-full w-2 h-2 mr-4" />
-									<p className="text-gray-300 text-sm">Competitive Analysis</p>
-								</div>
-								<div className="w-full py-4 flex items-center relative">
-									<div className="bg-yellow-400 rounded-full w-2 h-2 mr-4" />
-									<p className="text-gray-300 text-sm">Motion Graphics</p>
-								</div>
-								<div className="w-full py-4 flex items-center relative">
-									<div className="bg-yellow-400 rounded-full w-2 h-2 mr-4" />
-									<p className="text-gray-300 text-sm">Product Management</p>
-								</div>
-							</div>
-						</div>
-					</div>
+				</div>
+				<div className="w-full flex flex-wrap justify-center">
+					<AdCard
+						url={
+							'https://images.unsplash.com/photo-1559136656-3db4bf6c35f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+						}
+					/>
+					<AdCard
+						url={
+							'https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+						}
+					/>
+					<AdCard
+						url={
+							'https://images.unsplash.com/photo-1558095625-f882e3436125?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+						}
+					/>
 				</div>
 			</div>
 		</div>

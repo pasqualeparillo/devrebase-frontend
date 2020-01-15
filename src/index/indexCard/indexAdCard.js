@@ -9,7 +9,7 @@ export default function IndexAdCard({ i }) {
 	];
 	return (
 		<div
-			className="ad-card rounded flex flex-col relative cursor-pointer "
+			className="ad-card rounded flex flex-col relative cursor-pointer flex-grow"
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
@@ -21,12 +21,15 @@ export default function IndexAdCard({ i }) {
 			</div>
 			<div className="w-full flex flex-col border-r border-l border-b rounded-b bg-white">
 				<div className="lg:pt-6 md:pt-6 pt-4 px-4">
-					<p className={isHovered ? `text-xl underline` : `text-xl`} style={{ color: 'blue' }}>
+					<p
+						className={isHovered ? `text-xl underline heading` : `text-xl heading`}
+						style={{ color: 'blue' }}
+					>
 						Fully custom spaces
 					</p>
 				</div>
 				<div className="lg:pt-2 lg:pb-6 md:pb-6 pb-4 px-4 flex">
-					<p className="lg:text-base md:text-base text-sm leading-loose ">Whole buildings to full.</p>
+					<p className="lg:text-base md:text-base text-sm leading-loose subtext">Whole buildings to full.</p>
 				</div>
 			</div>
 		</div>

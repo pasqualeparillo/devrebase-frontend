@@ -15,26 +15,26 @@ export default function IndexSearch() {
 					}}
 				>
 					<div className="py-4">
-						<p className="text-4xl font-semibold font-sans">Revolutionize your workspace</p>
+						<p className="text-4xl font-semibold heading">Revolutionize your workspace</p>
 					</div>
 					<div className="py-4 ">
-						<p className="text-small leading-relaxed font-mono">
+						<p className="text-small leading-relaxed subtext">
 							Job searching doesn't HAVE to be so hard. One account, one site, all the jobs.
 						</p>
 					</div>
 					<div className="py-4 relative">
 						<form>
 							<input
-								className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black"
+								className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black subtext"
 								placeholder="Job Title"
 								type="text"
 							/>
 							<div className="absolute bg-white px-2" style={{ left: '1rem', top: '.5rem' }}>
-								<p className="text-xs text-gray-600 font-mono">Find your ideal job</p>
+								<p className="text-xs text-gray-600 subtext tracking-wider">Find Your Job</p>
 							</div>
 
 							<motion.button
-								className="w-full rounded text-black mt-8 py-4 font-mono"
+								className="w-full rounded text-black mt-8 py-4 subtext"
 								style={{ backgroundColor: '#ffd460' }}
 								whileHover={{ backgroundColor: '#f9ed69' }}
 								transition={{ duration: 0.2 }}
@@ -55,26 +55,26 @@ export default function IndexSearch() {
 					}}
 				>
 					<div className="py-4">
-						<p className="md:text-4xl text-xl font-semibold">Revolutionize your workspace</p>
+						<p className="md:text-4xl text-xl font-semibold heading">Revolutionize your workspace</p>
 					</div>
 					<div className="py-4 ">
-						<p className="text-small leading-relaxed font-mono">
+						<p className="text-small leading-relaxed subtext">
 							Job searching doesn't HAVE to be so hard. One account, one site, all the jobs.
 						</p>
 					</div>
 					<div className="py-4 relative">
 						<form>
 							<input
-								className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black"
+								className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black heading"
 								placeholder="Job Title"
 								type="text"
 							/>
 							<div className="absolute bg-white px-2" style={{ left: '1rem', top: '.5rem' }}>
-								<p className="text-xs text-gray-600 font-mono">Find your ideal job</p>
+								<p className="text-xs text-gray-600 subtext">Find your ideal job</p>
 							</div>
 
 							<motion.button
-								className="w-full rounded text-black mt-8 py-4 font-mono"
+								className="w-full rounded text-black mt-8 py-4 subtext"
 								style={{ backgroundColor: '#ffd460' }}
 								whileHover={{ backgroundColor: '#f9ed69' }}
 								transition={{ duration: 0.2 }}
@@ -89,16 +89,16 @@ export default function IndexSearch() {
 				<div className="relative flex flex-col justify-center bg-white rounded z-50 mt-0 mx-auto w-full">
 					<div className="py-4 relative mt-2">
 						<input
-							className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black"
+							className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black heading"
 							placeholder="Job Title"
 							type="text"
 						/>
 						<div className="absolute bg-white px-2" style={{ left: '1rem', top: '.5rem' }}>
-							<p className="text-xs text-gray-600">Find your ideal job</p>
+							<p className="text-xs text-gray-600 subtext">Find your ideal job</p>
 						</div>
 
 						<motion.button
-							className="w-full rounded text-black mt-8 py-4 "
+							className="w-full rounded text-black mt-8 py-4 subtext"
 							style={{ backgroundColor: '#ffd460' }}
 							whileHover={{ backgroundColor: '#f9ed69' }}
 							transition={{ duration: 0.2 }}

@@ -31,11 +31,13 @@ export default function IndexCarousel() {
 
 	return (
 		<div className="lg:absolute relative w-full h-full bg-white z-40 right-0 flex lg:flex-row flex-col justify-end ">
-			<p className="lg:hidden md:hidden block text-3xl font-semibold py-6">Revolutionize your workspace</p>
+			<p className="lg:hidden md:hidden block text-3xl font-semibold py-6 heading">
+				Revolutionize your workspace
+			</p>
 			<div className="lg:w-5/6 w-full rounded overflow-hidden">
-				<div className="inline-flex whitespace-no-wrap">
+				<div className="inline-flex whitespace-no-wrap h-full">
 					<motion.div
-						className="w-11/12 rounded relative flex inline-block"
+						className="w-11/12 rounded relative flex inline-block h-full"
 						animate={{ x: -transValue }}
 						transition={{ type: 'spring', stiffness: 300, damping: 200 }}
 						drag="x"
@@ -49,11 +51,11 @@ export default function IndexCarousel() {
 							<motion.div
 								style={{ width: '1056px', marginRight: '12px' }}
 								ref={slideRef}
-								className="whitespace-normal w-full h-full flex-shrink-0"
+								className="whitespace-normal w-full h-full flex-shrink-0 rounded overflow-hidden"
 								key={id}
 							>
 								<motion.div
-									className="h-auto relative overflow-hidden rounded bg-gray-300 w-full block"
+									className="h-full relative overflow-hidden rounded bg-gray-300 w-full block"
 									style={{ paddingBottom: 'calc(100% / (16 / 9)' }}
 									key={id}
 								>
@@ -69,14 +71,13 @@ export default function IndexCarousel() {
 						))}
 					</motion.div>
 				</div>
-				{console.log((urls.length - 1) * slideWidth, transValue)}
 			</div>
 			<motion.button
 				whileHover={{ backgroundColor: '#f9ed69', color: '#000000' }}
 				transition={{ duration: 0.2 }}
 				className="absolute h-16 w-16 rounded-full shadow-2xl lg:flex md:flex hidden justify-center text-3xl "
 				style={{
-					right: '2rem',
+					right: '-2rem',
 					transform: 'translateY(50%)',
 					top: 'calc(50% - 5rem)',
 					color: '#000000',

@@ -7,12 +7,12 @@ export default function Links() {
 			{links.map((data, id) => <Link text={data.text} key={id} />)}
 			<div className="h-10 flex items-center">
 				<input
-					className="h-full border-px border-black px-4 py-1 rounded-bl-lg rounded-tl-lg text-sm"
+					className="h-full border-px border-black px-4 py-1 rounded-bl-lg rounded-tl-lg text-sm subtext"
 					type="text"
 					placeholder="Your email address"
 				/>
 				<motion.button
-					className="h-full text-black px-10 py-1 rounded-br-lg rounded-tr-lg border-t-px border-b-px border-r-px border-black"
+					className="h-full text-black px-10 py-1 rounded-br-lg rounded-tr-lg border-t-px border-b-px border-r-px border-black subtext"
 					style={{ backgroundColor: '#ffd460' }}
 					whileHover={{ backgroundColor: '#f9ed69' }}
 					transition={{ duration: 0.2 }}
@@ -28,12 +28,12 @@ function Link({ text }) {
 	const [active, setActive] = useState(false);
 	return (
 		<motion.p
-			className="lg:text-base text-xs mx-6 relative cursor-pointer "
+			className="lg:text-base text-xs mx-6 relative cursor-pointer heading"
 			onMouseEnter={() => setActive(true)}
 			onMouseLeave={() => setActive(false)}
 		>
 			<motion.span
-				className="absolute w-full h-1  left-0 right-0"
+				className="absolute w-full h-1 left-0 right-0"
 				style={{ bottom: '0', backgroundColor: '#ffd460' }}
 				animate={active ? { y: 5, opacity: 1 } : { y: 20, opacity: 0 }}
 				initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,6 @@
 input.input-text-black::placeholder {
 	color: black;
+	font-weight: 500;
 }
 /* phone */
 @media (min-width: 320px) {

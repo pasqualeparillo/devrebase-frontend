@@ -6,7 +6,7 @@ import BaseRouter from './routes';
 function App({ children }) {
 	return (
 		<ContextProvider>
-			<div className="App font-mono">
+			<div className="App subtext">
 				<Layout {...children}>
 					<BaseRouter />
 				</Layout>
