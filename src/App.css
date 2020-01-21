@@ -1,72 +1,81 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Josefin+Sans:400,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Josefin+Sans:400,600,700&display=swap");
 @font-face {
-	font-family: 'Apercu';
-	src: url('../src/font/Apercu-Medium.woff2') format('woff2'), url('../src/font/Apercu-Medium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
+  font-family: "Apercu";
+  src: url("../src/font/Apercu-Medium.woff2") format("woff2"),
+    url("../src/font/Apercu-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Apercu';
-	src: url('../src/font/Apercu-Light.woff2') format('woff2'), url('../src/font/Apercu-Light.woff') format('woff');
-	font-weight: 300;
-	font-style: normal;
+  font-family: "Apercu";
+  src: url("../src/font/Apercu-Light.woff2") format("woff2"),
+    url("../src/font/Apercu-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Apercu';
-	src: url('../src/font/Apercu-Regular.woff2') format('woff2'), url('../src/font/Apercu-Regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Apercu";
+  src: url("../src/font/Apercu-Regular.woff2") format("woff2"),
+    url("../src/font/Apercu-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Apercu';
-	src: url('../src/font/Apercu-Bold.woff2') format('woff2'), url('../src/font/Apercu-Bold.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
+  font-family: "Apercu";
+  src: url("../src/font/Apercu-Bold.woff2") format("woff2"),
+    url("../src/font/Apercu-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
 }
 
 .heading {
-	font-family: 'Apercu';
-	font-weight: bold;
-	font-style: normal;
+  font-family: "Apercu";
+  font-weight: bold;
+  font-style: normal;
+}
+.sub-heading {
+  font-family: "Apercu";
+  font-weight: 400;
+  font-style: normal;
 }
 .subtext {
-	font-family: 'Apercu';
-	font-weight: 400;
-	font-style: normal;
+  font-family: "Apercu";
+  font-weight: normal;
+  font-style: normal;
 }
 
 .category-card:nth-child(4n) {
-	margin-right: 0;
+  margin-right: 0;
 }
 .category-card:first-child {
-	margin-left: 0;
+  margin-left: 0;
 }
 .button:first-child {
-	margin-left: 0 !important;
+  margin-left: 0 !important;
 }
 .button:last-child {
-	margin-right: 0 !important;
+  margin-right: 0 !important;
 }
 .mix-blend-difference {
-	mix-blend-mode: difference;
+  mix-blend-mode: difference;
 }
 input[type="checkbox"]:checked::after {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 50%;
-	height: 50%;
-	background-color: #000000;
-	transform: translate(50%, 50%);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #000000;
+  transform: translate(50%, 50%);
 }
 html {
-	overflow: scroll;
-	overflow-x: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-	width: 0px;
-	background: transparent;
+  width: 0px;
+  background: transparent;
 }
