@@ -74,8 +74,8 @@ export default function IndexJobType() {
                 animate={{ x: -transValue }}
                 transition={{ type: "spring", stiffness: 300, damping: 200 }}
               >
-                <p className="heading" key={id}>
-                  test
+                <p className="heading text-3xl" key={id}>
+                  tempCTA
                 </p>
               </motion.div>
             </motion.div>
