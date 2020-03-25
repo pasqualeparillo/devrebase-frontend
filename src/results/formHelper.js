@@ -23,10 +23,10 @@ export function Checkbox({ text }) {
     <div className="checkbox relative">
       <input
         type="checkbox"
-        className="w-full absolute h-full z-20 "
+        className="w-full absolute h-full z-20"
         onClick={() => filterResults()}
       />
-      <label className="ml-8 text-gray-700 truncate text-sm" htmlFor="checkbox">
+      <label className="ml-8 truncate subtext" htmlFor="checkbox">
         {text}
       </label>
     </div>
@@ -52,12 +52,12 @@ export function Button({ text }) {
       <motion.button
         animate={
           active
-            ? { color: "#ffffff", backgroundColor: "#000000" }
-            : { color: "#a0aec0", backgroundColor: "#edf2f7" }
+            ? { color: "white", backgroundColor: "blue" }
+            : { color: "black", backgroundColor: "white" }
         }
-        initial={{ color: "#a0aec0", backgroundColor: "#edf2f7" }}
+        initial={{ color: "#a0aec0", backgroundColor: "white" }}
         transition={{ duration: 0.2 }}
-        className={"px-3 py-1 rounded-full text-sm truncate"}
+        className="px-3 py-1 flex flex-grow rounded subtext truncate border"
         onClick={() => setActive(!active)}
       >
         {text}
@@ -73,22 +73,22 @@ export function DropDown() {
           Distance:
         </label>
         <select
-          className="w-full border border-black px-4 py-2 rounded-full bg-gray-100 text-sm"
+          className="w-full border px-4 py-2 rounded bg-white subtext"
           name="distance"
         >
-          <option className=" text-sm" value="5">
+          <option className="subtext" value="5">
             within 5 miles
           </option>
-          <option className=" text-sm" value="10">
+          <option className="subtext" value="10">
             within 10 miles
           </option>
-          <option className=" text-sm" value="20">
+          <option className="subtext" value="20">
             within 20 miles
           </option>
-          <option className=" text-sm" value="50">
+          <option className="subtext" value="50">
             within 50 miles
           </option>
-          <option className=" text-sm" value="50">
+          <option className="subtext" value="50">
             any
           </option>
         </select>

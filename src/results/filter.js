@@ -8,11 +8,8 @@ import MediaQuery from "react-responsive";
 export function Filter() {
   return (
     <MediaQuery minWidth={992}>
-      <div className="w-1/5  relative">
-        <div
-          className="sticky bottom-0 left-0 border-r"
-          style={{ top: "5rem" }}
-        >
+      <div className="w-1/5 relative border-r bg-white">
+        <div className="sticky bottom-0 left-0 " style={{ top: "5rem" }}>
           <div className="flex flex-col flex-wrap p-6 items-center justify-center w-full">
             <div className="w-full flex justify-start  px-6">
               <p className="font-semibold text-xl">Job types</p>

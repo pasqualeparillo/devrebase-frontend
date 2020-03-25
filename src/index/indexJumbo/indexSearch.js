@@ -2,8 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import MediaQuery from "react-responsive";
 import { withRouter } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 function IndexSearch() {
+  let history = useHistory();
+  function onSubmit() {
+    history.push("/results");
+  }
   return (
     <React.Fragment>
       <MediaQuery minWidth={1025}>
@@ -27,7 +31,7 @@ function IndexSearch() {
             </p>
           </div>
           <div className="py-4 relative">
-            <form>
+            <form onSubmit={() => onSubmit()}>
               <input
                 className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black subtext"
                 placeholder="Job Title"
@@ -43,9 +47,10 @@ function IndexSearch() {
               </div>
 
               <motion.button
-                className="w-full rounded text-black mt-8 py-4 subtext"
-                style={{ backgroundColor: "#ffd460" }}
-                whileHover={{ backgroundColor: "#f9ed69" }}
+                className="w-full rounded text-white mt-8 py-4 subtext"
+                style={{ backgroundColor: "blue" }}
+                whileHover={{ backgroundColor: "darkblue" }}
+                whileTap={{ scale: 1.01 }}
                 transition={{ duration: 0.2 }}
               >
                 Submit
@@ -75,7 +80,7 @@ function IndexSearch() {
             </p>
           </div>
           <div className="py-4 relative">
-            <form>
+            <form onSubmit={() => onSubmit()}>
               <input
                 className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black heading"
                 placeholder="Job Title"
@@ -104,7 +109,7 @@ function IndexSearch() {
       </MediaQuery>
       <MediaQuery minWidth={0} maxWidth={767}>
         <div className="relative flex flex-col justify-center bg-white rounded z-50 mt-0 mx-auto w-full">
-          <div className="py-4 relative mt-2">
+          <div className="py-4 relative mt-2 w-full">
             <input
               className="w-full py-4 px-4 border-black border text-small rounded text-black input-text-black heading"
               placeholder="Job Title"

@@ -6,9 +6,9 @@ import { MobileFilter } from "../results/filter";
 export default function IndexPage() {
   return (
     <div className="relative w-full mx-auto">
-      <div className="pt-16 pb-16 w-full flex mx-auto bg-white flex justify-center border-b border-gray-200">
-        <div className="w-full flex justify-center mt-32">
-          <SearchBar styles={"lg:w-4/5 w-11.5/12 lg:p-4 p-1 shadow"} />
+      <div className="w-full flex mx-auto bg-white flex justify-center border-b border-t border-gray-200 sticky top-0 left-0 right-0 bottom-0 z-50 h-16">
+        <div className="w-full flex justify-end">
+          <SearchBar />
         </div>
         <MobileFilter />
       </div>

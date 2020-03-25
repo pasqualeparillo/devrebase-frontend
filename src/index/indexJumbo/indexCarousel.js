@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { IoIosArrowForward } from "react-icons/io";
 
 export default function IndexCarousel() {
   const [slideWidth, setSlideWidth] = useState(0);
@@ -79,19 +78,30 @@ export default function IndexCarousel() {
         </div>
       </div>
       <motion.button
-        whileHover={{ backgroundColor: "#f9ed69", color: "#000000" }}
+        whileHover={{ backgroundColor: "#ccf", color: "blue" }}
         transition={{ duration: 0.2 }}
-        className="absolute h-16 w-16 rounded-full shadow-2xl lg:flex md:flex hidden justify-center text-3xl "
+        className="absolute h-16 w-16 rounded-full shadow-2xl lg:flex md:flex hidden justify-center text-3xl bg-white"
         style={{
           right: "-2rem",
           transform: "translateY(50%)",
           top: "calc(50% - 5rem)",
-          color: "#000000",
-          backgroundColor: "#ffd460"
+          color: "blue"
         }}
         onClick={() => nextSlide()}
       >
-        <IoIosArrowForward />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5"
+          style={{ transform: "rotate(90deg)", fill: "blue" }}
+          viewBox="0 0 11.99 6.99"
+        >
+          <g data-name="Layer 2">
+            <path
+              d="M11.85 6.85a.46.46 0 0 1-.67 0L6 1.2.81 6.85a.46.46 0 0 1-.67 0 .46.46 0 0 1 0-.67l5.47-6V.1A.5.5 0 0 1 6 0a.45.45 0 0 1 .35.14v.08l5.46 6a.46.46 0 0 1 .04.63z"
+              data-name="Layer 1"
+            ></path>
+          </g>
+        </svg>
       </motion.button>
     </div>
   );
