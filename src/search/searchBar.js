@@ -14,25 +14,25 @@ function SearchBar({ history, styles }) {
 
   return (
     <form
-      className="flex w-4/5 bg-white sticky"
+      className="flex lg:w-4/5 w-full bg-white sticky"
       onSubmit={handleSubmit(onSubmit)}
     >
       <input
-        className="flex-grow bg-transparent px-4 py-4 lg:text-left text-center tracking-wider text-black subtext rounded-none border-r"
+        className="flex-grow bg-transparent lg:px-4 px-2 py-4 lg:text-left text-center tracking-wider text-black subtext rounded-none border-r w-2/5"
         type="text"
         placeholder="Job title or keywords"
         name="jobDescription"
         ref={register}
       />
       <input
-        className="flex-grow bg-transparent px-4 py-4 lg:text-left text-center tracking-wider text-black subtext rounded-none"
+        className="flex-grow bg-transparent lg:px-4 px-2 py-4 lg:text-left text-center tracking-wider text-black subtext rounded-none w-2/5"
         type="text"
         placeholder="Location"
         name="areaCode"
         ref={register}
       />
 
-      <div className="flex w-1/3 justify-center items-center">
+      <div className="flex w-1/5 justify-center items-center">
         <motion.button
           className="self-center w-1/2 items-center rounded text-white py-3 subtext"
           style={{ backgroundColor: "blue" }}

@@ -1,41 +1,104 @@
-import React, { useContext } from "react";
-import Card from "./card";
-import { ResultsContext } from "../store/results";
-import useFetch from "../hooks/fetch";
-export default function Map() {
-  const { results, loading, open, setOpen, setData } = useContext(
-    ResultsContext
-  );
-  function handleOnClick(data) {
-    setOpen(!open);
-    setData(data);
-  }
-  useFetch("http://127.0.0.1:8000/");
+import React from "react";
+import { Map, GoogleApiWrapper } from "google-maps-react";
 
+function Gmap({ google, mapStyles }) {
   return (
-    <div className="flex flex-wrap w-1/2 justify-center">
-      {console.log(results)}
-      {loading ? (
-        <React.Fragment>
-          <div className="w-5/6">
-            <p className="text-3xl font-black ml-2">Loading...</p>
-          </div>
-        </React.Fragment>
-      ) : (
-        results.map((data, id) => (
-          <Card
-            handleOnClick={() => handleOnClick(data)}
-            key={id}
-            id={data.id}
-            url={data.job_url}
-            title={data.job_title}
-            company={data.job_company}
-            location={data.job_location}
-            source={data.job_source}
-            body={data.job_body}
-          />
-        ))
-      )}
-    </div>
+    <Map
+      google={google}
+      zoom={14}
+      zoomControlOptions={{ position: google.maps.ControlPosition.LEFT_TOP }}
+      zoomControl={true}
+      streetViewControl={false}
+      fullscreenControl={false}
+      style={{ width: "100%", height: "100%" }}
+      initialCenter={{
+        lat: 47.608013,
+        lng: -122.335167
+      }}
+      styles={mapStyles}
+      disableDefaultUI={true}
+    />
   );
 }
+Gmap.defaultProps = {
+  // The style is copy from https://snazzymaps.com/style/2/midnight-commander
+  mapStyles: [
+    {
+      stylers: [
+        {
+          hue: "#ccf"
+        },
+        {
+          saturation: 100
+        }
+      ]
+    },
+    {
+      featureType: "transit",
+      stylers: [
+        {
+          visibility: "off"
+        }
+      ]
+    },
+    {
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+        {
+          lightness: 100
+        },
+        {
+          visibility: "simplified"
+        }
+      ]
+    },
+    {
+      featureType: "road.local",
+      stylers: [
+        {
+          visibility: "off"
+        }
+      ]
+    },
+    {
+      featureType: "road.local",
+      elementType: "labels",
+      stylers: [
+        {
+          visibility: "off"
+        }
+      ]
+    },
+    {
+      featureType: "road.highway",
+      stylers: [
+        {
+          visibility: "off"
+        }
+      ]
+    },
+    {
+      featureType: "road.arterial",
+      elementType: "labels",
+      stylers: [
+        {
+          visibility: "off"
+        }
+      ]
+    },
+
+    {
+      featureType: "poi",
+      elementType: "labels.text",
+      stylers: [
+        {
+          visibility: "off"
+        }
+      ]
+    }
+  ]
+};
+export default GoogleApiWrapper({
+  apiKey: process.env.REACT_APP_MAPS_API_KEY
+})(Gmap);

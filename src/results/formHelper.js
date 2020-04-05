@@ -52,10 +52,10 @@ export function Button({ text }) {
       <motion.button
         animate={
           active
-            ? { color: "white", backgroundColor: "blue" }
-            : { color: "black", backgroundColor: "white" }
+            ? { color: "#FFFFFF", backgroundColor: "#0000FF" }
+            : { color: "#000000", backgroundColor: "#FFFFFF" }
         }
-        initial={{ color: "#a0aec0", backgroundColor: "white" }}
+        initial={{ color: "#a0aec0", backgroundColor: "#FFFFFF" }}
         transition={{ duration: 0.2 }}
         className="px-3 py-1 flex flex-grow rounded subtext truncate border"
         onClick={() => setActive(!active)}
