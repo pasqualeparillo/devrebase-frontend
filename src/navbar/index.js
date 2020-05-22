@@ -10,7 +10,7 @@ export default function Header() {
       style={{ maxWidth: "1440px" }}
     >
       <MediaQuery minWidth={1025}>
-        <div className="flex w-full justify-between mx-auto">
+        <div className="flex w-full mx-auto">
           <Logo />
           <Links />
         </div>

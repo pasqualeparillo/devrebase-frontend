@@ -1,104 +1,229 @@
 import React from "react";
-import { Map, GoogleApiWrapper } from "google-maps-react";
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
 function Gmap({ google, mapStyles }) {
   return (
     <Map
       google={google}
-      zoom={14}
-      zoomControlOptions={{ position: google.maps.ControlPosition.LEFT_TOP }}
+      zoom={15}
+      zoomControlOptions={{
+        position: google.maps.ControlPosition.TOP_RIGHT,
+      }}
       zoomControl={true}
       streetViewControl={false}
       fullscreenControl={false}
-      style={{ width: "100%", height: "100%" }}
       initialCenter={{
         lat: 47.608013,
-        lng: -122.335167
+        lng: -122.335167,
       }}
       styles={mapStyles}
       disableDefaultUI={true}
-    />
+    >
+      <Marker name={"marker"} />
+    </Map>
   );
 }
+
 Gmap.defaultProps = {
   // The style is copy from https://snazzymaps.com/style/2/midnight-commander
   mapStyles: [
     {
+      featureType: "poi",
+      elementType: "labels.text.fill",
       stylers: [
         {
-          hue: "#ccf"
+          color: "#747474",
         },
         {
-          saturation: 100
-        }
-      ]
+          lightness: "23",
+        },
+      ],
     },
     {
-      featureType: "transit",
+      featureType: "poi.attraction",
+      elementType: "geometry.fill",
       stylers: [
         {
-          visibility: "off"
-        }
-      ]
+          color: "#f38eb0",
+        },
+      ],
+    },
+    {
+      featureType: "poi.government",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#ced7db",
+        },
+      ],
+    },
+    {
+      featureType: "poi.medical",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#ffa5a8",
+        },
+      ],
+    },
+    {
+      featureType: "poi.park",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#c7e5c8",
+        },
+      ],
+    },
+    {
+      featureType: "poi.place_of_worship",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#d6cbc7",
+        },
+      ],
+    },
+    {
+      featureType: "poi.school",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#c4c9e8",
+        },
+      ],
+    },
+    {
+      featureType: "poi.sports_complex",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#b1eaf1",
+        },
+      ],
     },
     {
       featureType: "road",
       elementType: "geometry",
       stylers: [
         {
-          lightness: 100
+          lightness: "100",
         },
-        {
-          visibility: "simplified"
-        }
-      ]
+      ],
     },
     {
-      featureType: "road.local",
-      stylers: [
-        {
-          visibility: "off"
-        }
-      ]
-    },
-    {
-      featureType: "road.local",
+      featureType: "road",
       elementType: "labels",
       stylers: [
         {
-          visibility: "off"
-        }
-      ]
+          visibility: "off",
+        },
+        {
+          lightness: "100",
+        },
+      ],
     },
     {
       featureType: "road.highway",
+      elementType: "geometry.fill",
       stylers: [
         {
-          visibility: "off"
-        }
-      ]
+          color: "#ffd4a5",
+        },
+      ],
     },
     {
       featureType: "road.arterial",
-      elementType: "labels",
+      elementType: "geometry.fill",
       stylers: [
         {
-          visibility: "off"
-        }
-      ]
+          color: "#ffe9d2",
+        },
+      ],
     },
-
     {
-      featureType: "poi",
+      featureType: "road.local",
+      elementType: "all",
+      stylers: [
+        {
+          visibility: "simplified",
+        },
+      ],
+    },
+    {
+      featureType: "road.local",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          weight: "3.00",
+        },
+      ],
+    },
+    {
+      featureType: "road.local",
+      elementType: "geometry.stroke",
+      stylers: [
+        {
+          weight: "0.30",
+        },
+      ],
+    },
+    {
+      featureType: "road.local",
       elementType: "labels.text",
       stylers: [
         {
-          visibility: "off"
-        }
-      ]
-    }
-  ]
+          visibility: "on",
+        },
+      ],
+    },
+    {
+      featureType: "road.local",
+      elementType: "labels.text.fill",
+      stylers: [
+        {
+          color: "#747474",
+        },
+        {
+          lightness: "36",
+        },
+      ],
+    },
+    {
+      featureType: "road.local",
+      elementType: "labels.text.stroke",
+      stylers: [
+        {
+          color: "#e9e5dc",
+        },
+        {
+          lightness: "30",
+        },
+      ],
+    },
+    {
+      featureType: "transit.line",
+      elementType: "geometry",
+      stylers: [
+        {
+          visibility: "on",
+        },
+        {
+          lightness: "100",
+        },
+      ],
+    },
+    {
+      featureType: "water",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#d2e7f7",
+        },
+      ],
+    },
+  ],
 };
 export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_MAPS_API_KEY
+  apiKey: process.env.REACT_APP_MAPS_API_KEY,
 })(Gmap);

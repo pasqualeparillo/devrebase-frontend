@@ -10,16 +10,16 @@ const useFetch = () => {
     error,
     setError,
     loading,
-    setLoading
+    setLoading,
   } = useContext(ResultsContext);
   const { search } = useContext(SearchContext);
   useEffect(() => {
-    const fetchData = async function() {
+    const fetchData = async function () {
       try {
         setLoading(true);
         const response = await axios.get(search);
         if (response.status === 200) {
-          setResults(response.data.results);
+          setResults(response.data);
         }
       } catch (error) {
         setError(error);

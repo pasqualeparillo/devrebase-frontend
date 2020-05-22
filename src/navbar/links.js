@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Links() {
   return (
-    <div className="flex items-center justify-end w-2/3">
+    <div className="flex items-center justify-start w-2/3">
       {links.map((data, id) => (
         <Link text={data.text} key={id} />
       ))}
@@ -20,8 +20,8 @@ function Link({ text }) {
       onMouseLeave={() => setActive(false)}
     >
       <motion.span
-        className="absolute w-full h-1 left-0 right-0"
-        style={{ bottom: "0", backgroundColor: "#ffd460" }}
+        className="absolute w-full left-0 right-0"
+        style={{ bottom: "0", backgroundColor: "black", height: "1px" }}
         animate={active ? { y: 5, opacity: 1 } : { y: 20, opacity: 0 }}
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.4 }}

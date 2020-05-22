@@ -3,6 +3,7 @@ import { ResultsProvider } from "./results";
 import { ModalProvider } from "./modal";
 import { SearchProvider } from "./search";
 import { PositionProvider } from "./position";
+import { LoginProvider } from "./login";
 function ProviderComposer({ contexts, children }) {
   return contexts.reduceRight(
     (kids, parent) =>
@@ -20,7 +21,8 @@ function ContextProvider({ children }) {
         <ResultsProvider />,
         <ModalProvider />,
         <SearchProvider />,
-        <PositionProvider />
+        <PositionProvider />,
+        <LoginProvider />
       ]}
     >
       {children}

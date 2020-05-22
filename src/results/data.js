@@ -13,7 +13,8 @@ export default function Data() {
   useFetch("http://127.0.0.1:8000/");
 
   return (
-    <div className="flex flex-wrap w-full justify-center">
+    <div className="flex flex-wrap w-full h-auto overflow-y-scroll justify-center">
+      {console.log(results)}
       {loading ? (
         <React.Fragment>
           <div className="w-5/6">
@@ -21,7 +22,7 @@ export default function Data() {
           </div>
         </React.Fragment>
       ) : (
-        results.map((data, id) => (
+        results.results.map((data, id) => (
           <Card
             handleOnClick={() => handleOnClick(data)}
             key={id}

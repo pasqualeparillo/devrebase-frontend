@@ -1,7 +1,7 @@
 import React from "react";
 export default function Logo() {
   return (
-    <div className="flex h-full">
+    <div className="flex h-full pr-6">
       <div className="items-center justify-center flex h-full relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"

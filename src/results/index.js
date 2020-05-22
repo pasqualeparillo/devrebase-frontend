@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import Data from "./data";
 import GoogleApiWrapper from "./map";
 import { withRouter } from "react-router-dom";
 import { Filter } from "./filter";
+import { ResultsContext } from "../store/results";
 
 function Results() {
+  const { results } = useContext(ResultsContext);
   return (
     <div className="flex flex-wrap w-full relative">
-      <Filter />
-      <div className="lg:w-2/5 w-full flex flex-col lg:justify-start justify-center flex-wrap">
-        <Data />
-      </div>
-      <div className="w-2/5 flex flex-col justify-start relative">
-        <div
-          className="sticky top-0 right-0 bottom-0 w-full"
-          style={{ height: "calc(100vh - 4rem)", top: "4rem" }}
-        >
-          <GoogleApiWrapper />
+      <div className="absolute top-0 right-0 bottom-0 left-0 w-screen h-screen flex flex-no-wrap">
+        <div className="w-1/3 h-full flex bg-transparent absolute z-50">
+          <div
+            className="w-full m-4 shadow-lg rounded-xl flex flex-col pb-4 pt-4"
+            style={{ backgroundColor: "#FAF7F5" }}
+          >
+            <Filter count={results.count} />
+            <Data />
+          </div>
         </div>
+        <GoogleApiWrapper />
       </div>
     </div>
   );

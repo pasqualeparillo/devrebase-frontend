@@ -1,12 +1,13 @@
 import React, { createContext, useState } from "react";
 export const LoginContext = createContext();
 export function LoginProvider(props) {
-  const [token, setToken] = useState(null);
+  let store = require("store");
+  const [user, setUser] = useState(store.get("user") || null);
   return (
     <LoginContext.Provider
       value={{
-        token,
-        setToken
+        user,
+        setUser
       }}
     >
       {props.children}
